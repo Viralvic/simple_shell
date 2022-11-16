@@ -36,13 +36,13 @@ int find_char_num(const char *s, const char *c, int idx);
 void insertion_sort(int arr[], int n);
 
 int change_dir(const char *str, char **env);
-void sig_handler(int sig_num);
-void exit_handler(char *line, ssize_t length);
-char *path_resolver(char **env, char *cmd);
+void sig_handle(int sig_num);
+void exit_handle(char *line, ssize_t length);
+char *path_resolve(char **env, char *cmd);
 void print_env(char **env);
 
 void write_prompt(int ac);
-bool env_handler(char *s, char *env[]);
+bool env_handle(char *s, char *env[]);
 
 char *_strrev (char *str);
 unsigned int num_len(unsigned int n);

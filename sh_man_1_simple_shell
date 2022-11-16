@@ -1,4 +1,4 @@
-.TH simple_shell "March, 28th 2018" "1" "simple shell (aka hsh) Manual"
+.TH simple_shell "NOVEMBER, 7th 2022" "1" "simple shell Manual"
 .SH NAME
 simple_shell
 
@@ -41,5 +41,5 @@ The program doesn't account for flags, fields, precision, or length modifiers.
 .SH SEE ALSO
 .B sh
 .SH AUTHORS
-Artur Adamian <arturadamian@gmail.com>
-Sergii Garkusha <garkusha.sergiy@gmail.com>
+Victory Oluku <olukuvictory@gmail.com>
+Samson Faturoti <faturoti3030@gmail.com>

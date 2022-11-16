@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * exit_handler - takes care of contrl -D
+ * exit_handle - takes care of contrl -D
  * @line: command line
  * @length: size of the line
  */
-void exit_handler(char *line, ssize_t length)
+void exit_handle(char *line, ssize_t length)
 {
 	if (_strcmp(line, "exit", 0, 3))
 	{

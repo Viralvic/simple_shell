@@ -18,13 +18,13 @@ char **_strtok(char *s)
 	if (tokens == NULL)
 		return (NULL);
 
-	itv = find_str_seq(s, " \t\r\n", tok_beg);
+	itv = find_str_sq(s, " \t\r\n", tok_beg);
 	tok_end = itv.end;
 
 	token = malloc(sizeof(char) * lent);
 	if (!token)
 		return (NULL);
-	get_str_seq(s, tok_beg, tok_end, &token);
+	get_str_sq(s, tok_beg, tok_end, &token);
 	tokens[xi] = malloc(_strlen(token) * sizeof(char));
 	if (tokens == NULL)
 		return (NULL);
@@ -38,9 +38,9 @@ char **_strtok(char *s)
 		if (lent == tok_beg)
 			break;
 
-		itv = find_str_seq(s, " \t\r\n", tok_beg);
+		itv = find_str_sq(s, " \t\r\n", tok_beg);
 		tok_end = itv.end;
-		get_str_seq(s, tok_beg, tok_end, &token);
+		get_str_sq(s, tok_beg, tok_end, &token);
 
 		tokens[xi] = malloc(_strlen(token) * sizeof(char));
 		_strcpy(tokens[xi], token);

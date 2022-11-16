@@ -16,7 +16,7 @@ int find_char_num(const char *s, const char *c, int idx)
 	xj = xq = 0;
 	xi = idx;
 
-	while (c[j])
+	while (c[xj])
 	{
 		xi = idx;
 		while (s[xi])

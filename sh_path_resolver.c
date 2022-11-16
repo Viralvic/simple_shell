@@ -18,7 +18,7 @@ char *path_resolve_helper(const char *path, char *cmd)
 
 	path_len = _strlen(path);
 	tok_beg = tok_end + 1; /* separator */
-	itv = find_str_seq(path, ":", tok_beg);
+	itv = find_str_sq(path, ":", tok_beg);
 	tok_end = itv.end;
 
 	tok = malloc((sizeof(char) + 1) * path_len);
@@ -28,7 +28,7 @@ char *path_resolve_helper(const char *path, char *cmd)
 	if (!bin)
 		return (NULL);
 
-	get_str_seq(path, tok_beg, tok_end, &tok);
+	get_str_sq(path, tok_beg, tok_end, &tok);
 	_strcpy(bin, tok);
 	_strcat(bin, "/");
 	_strcat(bin, cmd);
@@ -39,9 +39,9 @@ char *path_resolve_helper(const char *path, char *cmd)
 			return (cmd);
 
 		tok_beg = tok_end + 1; /* separator */
-		itv = find_str_seq(path, ":", tok_beg);
+		itv = find_str_sq(path, ":", tok_beg);
 		tok_end = (itv.end > path_len) ? path_len : itv.end;
-		get_str_seq(path, tok_beg, tok_end, &tok);
+		get_str_sq(path, tok_beg, tok_end, &tok);
 		_strcpy(bin, tok);
 		_strcat(bin, "/");
 		_strcat(bin, cmd);
